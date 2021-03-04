@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>A wild Pokémon appeared!</h1>
+      <h1>A wild Pokémon appeared! je moeder</h1>
       <div className="cirkel"></div>
       <img src={pokemonImg} />
       <div className="naampokemon">{pokemon}</div>
