@@ -44,6 +44,8 @@
     font-family: "Rubik", sans-serif;
     font-weight: 700;
     font-size: 60px;
+    color:#fff;
+    padding:20px;
   }
 
   .naampokemon::first-letter {
@@ -85,5 +87,18 @@
 
   .bug {
     background-color: #a8b821;
+  }
+  .catchknop {
+    background: rgb(44,205,168);
+    background: linear-gradient(90deg, rgba(44,205,168,1) 0%, rgba(161,221,157,1) 100%);
+    border-radius:27px;
+    border: 0;
+    width:215px;
+    height:53px;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px; 
+    color:#fff;
+    text-transform: uppercase;
+    margin:20px;
   }
 }

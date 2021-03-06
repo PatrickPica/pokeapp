@@ -45,7 +45,7 @@ function App() {
             {type.type.name}
           </div>
         ))}
-      <button onClick={randomPokemon}>Catch Pokémon!</button>
+      <button className="catchknop" onClick={randomPokemon}>Catch Pokémon!</button>
     </div>
   );
 }
