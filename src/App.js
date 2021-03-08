@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 
@@ -7,6 +6,7 @@ function App() {
   const [pokemonImg, setPokemonImg] = useState();
   const [wildpokemon, setWildpokemon] = useState("");
   const [typepokemon, setTypepokemon] = useState();
+  const [nummerpokemon, setNummerpokemon] = useState();
 
   function randomPokemon() {
     const randNum = Math.abs(Math.floor(Math.random() * (0 - 151)));
@@ -15,6 +15,7 @@ function App() {
       .then((data) => {
         setPokemon(data.name);
         setTypepokemon(data.types);
+        setNummerpokemon(data.id);
         setWildpokemon("A wild Pokémon appeared!");
         setPokemonImg(data.sprites.other["official-artwork"].front_default);
         console.log(data);
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <h1>{wildpokemon}</h1>
       <img src={pokemonImg} />
+      <div className="pokemonnumber">{nummerpokemon}</div>
       <div className="naampokemon">{pokemon}</div>
 
       {typepokemon &&
@@ -45,7 +47,9 @@ function App() {
             {type.type.name}
           </div>
         ))}
-      <button className="catchknop" onClick={randomPokemon}>Catch Pokémon!</button>
+      <button className="catchknop" onClick={randomPokemon}>
+        Catch Pokémon!
+      </button>
     </div>
   );
 }

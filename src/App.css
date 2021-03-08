@@ -40,12 +40,23 @@
     }
   }
 
+  .pokemonnumber {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 62px;
+    height: 27px;
+    margin: auto;
+    border-radius: 14px;
+  }
+
   .naampokemon {
     font-family: "Rubik", sans-serif;
     font-weight: 700;
     font-size: 60px;
-    color:#fff;
-    padding:20px;
+    color: #fff;
+    padding: 20px;
   }
 
   .naampokemon::first-letter {
@@ -89,16 +100,20 @@
     background-color: #a8b821;
   }
   .catchknop {
-    background: rgb(44,205,168);
-    background: linear-gradient(90deg, rgba(44,205,168,1) 0%, rgba(161,221,157,1) 100%);
-    border-radius:27px;
+    background: rgb(44, 205, 168);
+    background: linear-gradient(
+      90deg,
+      rgba(44, 205, 168, 1) 0%,
+      rgba(161, 221, 157, 1) 100%
+    );
+    border-radius: 27px;
     border: 0;
-    width:215px;
-    height:53px;
+    width: 215px;
+    height: 53px;
     font-family: "Rubik", sans-serif;
-    font-size: 16px; 
-    color:#fff;
+    font-size: 16px;
+    color: #fff;
     text-transform: uppercase;
-    margin:20px;
+    margin: 20px;
   }
 }
