@@ -46,7 +46,7 @@
     font-weight: 700;
     background-color: rgba(255, 255, 255, 0.5);
     width: 62px;
-    height: 27px;
+    padding: 3px;
     margin: auto;
     border-radius: 14px;
   }
@@ -69,13 +69,6 @@
     font-style: italic;
   }
 
-  .cirkel {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #d2ffe0;
-  }
-
   .pokemontype {
     width: 82px;
     margin: 0 auto;
@@ -83,21 +76,35 @@
     font-family: "Rubik", sans-serif;
     font-weight: 700;
     color: #fff;
+    margin-bottom: 10px;
+    padding: 5px;
   }
   .pokemontype::first-letter {
     text-transform: uppercase;
   }
 
   .poison {
-    background-color: yellow;
+    background-color: #e052e2;
   }
 
   .water {
-    background-color: blue;
+    background-color: #3da1df;
   }
 
   .bug {
     background-color: #a8b821;
+  }
+
+  .normal {
+  }
+
+  .electric {
+  }
+
+  .fighting {
+  }
+
+  .ground {
   }
   .catchknop {
     background: rgb(44, 205, 168);

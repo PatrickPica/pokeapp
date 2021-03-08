@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <h1>{wildpokemon}</h1>
       <img src={pokemonImg} />
-      <div className="pokemonnumber">{nummerpokemon}</div>
+      {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
       <div className="naampokemon">{pokemon}</div>
 
       {typepokemon &&
@@ -47,6 +47,7 @@ function App() {
             {type.type.name}
           </div>
         ))}
+
       <button className="catchknop" onClick={randomPokemon}>
         Catch Pokémon!
       </button>
