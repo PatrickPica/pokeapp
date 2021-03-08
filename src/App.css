@@ -84,7 +84,7 @@
   }
 
   .poison {
-    background-color: #e052e2;
+    background-color: #E052E2;
   }
 
   .water {
@@ -96,15 +96,54 @@
   }
 
   .normal {
+    background-color:#A8A878
   }
 
   .electric {
+    background-color: #F8D030;
   }
 
   .fighting {
+    background-color:#C03028;
   }
 
   .ground {
+    background-color:#E0C068;
+  }
+
+  .psychic {
+    background-color:#F85888;
+  }
+
+  .rock {
+    background-color:#B8A038;
+  }
+
+  .dark {
+    background-color:#705848;
+  }
+
+  .fire {
+    background-color:#F08030;
+  }
+  .grass {
+    background-color:#4DDF3D;
+  }
+
+  .ice {
+    background-color:#98D8D8;
+  }
+
+  .flying {
+    background-color:#A890F0;
+  }
+
+  .ghost {
+    background-color:#943DDF;
+  }
+
+  .dragon {
+    background-color:#7038F8;
   }
   .catchknop {
     background: rgb(44, 205, 168);
