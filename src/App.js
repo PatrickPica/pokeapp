@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import Pokedex from "./Header"
 
 function App() {
   const [pokemon, setPokemon] = useState("Start your adventure!");
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <Pokedex />
       <h1>{wildpokemon}</h1>
       <img src={pokemonImg} />
       {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
