@@ -1,12 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import Pokedex from "./Header"
 
 function App() {
   const [pokemon, setPokemon] = useState("Start your adventure!");
   const [pokemonImg, setPokemonImg] = useState();
   const [wildpokemon, setWildpokemon] = useState("");
   const [typepokemon, setTypepokemon] = useState();
+  const [nummerpokemon, setNummerpokemon] = useState();
 
   function randomPokemon() {
     const randNum = Math.abs(Math.floor(Math.random() * (0 - 151)));
@@ -15,6 +16,7 @@ function App() {
       .then((data) => {
         setPokemon(data.name);
         setTypepokemon(data.types);
+        setNummerpokemon(data.id);
         setWildpokemon("A wild Pokémon appeared!");
         setPokemonImg(data.sprites.other["official-artwork"].front_default);
         console.log(data);
@@ -24,8 +26,10 @@ function App() {
 
   return (
     <div className="App">
+      <Pokedex />
       <h1>{wildpokemon}</h1>
       <img src={pokemonImg} />
+      {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
       <div className="naampokemon">{pokemon}</div>
 
       {typepokemon &&
@@ -38,6 +42,30 @@ function App() {
                 ? "water pokemontype"
                 : type.type.name === "bug"
                 ? "bug pokemontype"
+                : type.type.name === "normal"
+                ? "normal pokemontype"
+                : type.type.name === "electric"
+                ? "electric pokemontype"
+                : type.type.name === "fighting"
+                ? "fighting pokemontype"
+                : type.type.name === "ground"
+                ? "ground pokemontype"
+                : type.type.name === "psychic"
+                ? "psychic pokemontype"
+                : type.type.name === "rock"
+                ? "rock pokemontype"
+                : type.type.name === "fire"
+                ? "fire pokemontype"
+                : type.type.name === "grass"
+                ? "grass pokemontype"
+                : type.type.name === "ice"
+                ? "ice pokemontype"
+                : type.type.name === "flying"
+                ? "flying pokemontype"
+                : type.type.name === "ghost"
+                ? "ghost pokemontype"
+                : type.type.name === "dragon"
+                ? "dragon pokemontype"
                 : ""
             }
             key={type.type.name}
@@ -45,7 +73,10 @@ function App() {
             {type.type.name}
           </div>
         ))}
-      <button className="catchknop" onClick={randomPokemon}>Catch Pokémon!</button>
+
+      <button className="catchknop" onClick={randomPokemon}>
+        Catch Pokémon!
+      </button>
     </div>
   );
 }

@@ -40,12 +40,32 @@
     }
   }
 
+  .App img {
+    max-width:302px;
+  }
+  .pokedexicoon {
+    display: flex;
+    justify-content: flex-start;
+    padding:20px;
+  }
+
+  .pokemonnumber {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 62px;
+    padding: 3px;
+    margin: auto;
+    border-radius: 14px;
+  }
+
   .naampokemon {
     font-family: "Rubik", sans-serif;
-    font-weight: 700;
-    font-size: 60px;
-    color:#fff;
-    padding:20px;
+    font-weight: regular;
+    font-size: 39px;
+    color: #fff;
+    padding: 20px;
   }
 
   .naampokemon::first-letter {
@@ -58,47 +78,98 @@
     font-style: italic;
   }
 
-  .cirkel {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #d2ffe0;
-  }
-
   .pokemontype {
     width: 82px;
+    max-height:24px;
     margin: 0 auto;
     border-radius: 6px;
     font-family: "Rubik", sans-serif;
     font-weight: 700;
     color: #fff;
+    margin-bottom: 10px;
+    padding: 5px;
   }
   .pokemontype::first-letter {
     text-transform: uppercase;
   }
 
   .poison {
-    background-color: yellow;
+    background-color: #E052E2;
   }
 
   .water {
-    background-color: blue;
+    background-color: #3da1df;
   }
 
   .bug {
     background-color: #a8b821;
   }
+
+  .normal {
+    background-color:#A8A878
+  }
+
+  .electric {
+    background-color: #F8D030;
+  }
+
+  .fighting {
+    background-color:#C03028;
+  }
+
+  .ground {
+    background-color:#E0C068;
+  }
+
+  .psychic {
+    background-color:#F85888;
+  }
+
+  .rock {
+    background-color:#B8A038;
+  }
+
+  .dark {
+    background-color:#705848;
+  }
+
+  .fire {
+    background-color:#F08030;
+  }
+  .grass {
+    background-color:#4DDF3D;
+  }
+
+  .ice {
+    background-color:#98D8D8;
+  }
+
+  .flying {
+    background-color:#A890F0;
+  }
+
+  .ghost {
+    background-color:#943DDF;
+  }
+
+  .dragon {
+    background-color:#7038F8;
+  }
   .catchknop {
-    background: rgb(44,205,168);
-    background: linear-gradient(90deg, rgba(44,205,168,1) 0%, rgba(161,221,157,1) 100%);
-    border-radius:27px;
+    background: rgb(44, 205, 168);
+    background: linear-gradient(
+      90deg,
+      rgba(44, 205, 168, 1) 0%,
+      rgba(161, 221, 157, 1) 100%
+    );
+    border-radius: 27px;
     border: 0;
-    width:215px;
-    height:53px;
+    width: 215px;
+    height: 53px;
     font-family: "Rubik", sans-serif;
-    font-size: 16px; 
-    color:#fff;
+    font-size: 16px;
+    color: #fff;
     text-transform: uppercase;
-    margin:20px;
+    margin: 20px;
   }
 }
