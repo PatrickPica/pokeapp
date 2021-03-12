@@ -3,7 +3,9 @@ import React from "react";
 function Pokedex() {
     return(
         <div className="pokedexicoon">
-            <img src="../pokedexicon.png" alt="pokedexicoon"/>    
+            <a href="Pokedex.js">
+          <img src="../pokedexicon.png" alt="pokedexicoon"/>    
+            </a>
         </div>
     );
 }
