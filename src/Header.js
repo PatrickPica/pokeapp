@@ -1,14 +1,13 @@
 import React from "react";
 
-function Pokedex() {
+function Pokedexplaatje() {
     return(
         <div className="pokedexicoon">
-            <a href="Pokedex.js">
+            <a href="../Pokedex.js">
           <img src="../pokedexicon.png" alt="pokedexicoon"/>    
             </a>
         </div>
     );
 }
 
-export default Pokedex;
-console.log('kutspel');
+export default Pokedexplaatje;

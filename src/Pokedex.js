@@ -1,8 +1,12 @@
 import React from "react";
-import Pokedex from "./Header";
 
     function(Pokedexpage) {
-
+        const [pokemon, setPokemon] = useState()
     }
+    return (
+        <div>
+            <h1>Jo Mama</h1>
+        </div>
+    )
 
 export default Pokedex;
