@@ -1,12 +1,13 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 function Pokedexplaatje() {
     return(
+        <Link to="/Pokedex">
         <div className="pokedexicoon">
-            <a href="../Pokedex.js">
           <img src="../pokedexicon.png" alt="pokedexicoon"/>    
-            </a>
         </div>
+        </Link>
     );
 }
 

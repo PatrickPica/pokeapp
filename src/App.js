@@ -1,6 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Pokedexplaatje from "./Header"
+import Pokedexplaatje from "./Header";
+import Pokedexpage from "./Pokedex";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function App() {
   const [pokemon, setPokemon] = useState("Start your adventure!");
@@ -26,7 +29,12 @@ function App() {
 
   return (
     <div className="App">
-      <Pokedexplaatje />
+      <Router>
+      <Route path="/Pokedex" component={Pokedexpage}/>
+      <Link to="/Pokedex"><div className="pokedexicoon">
+          <img src="../pokedexicon.png" alt="pokedexicoon"/>    
+        </div></Link>
+      </Router>
       <h1>{wildpokemon}</h1>
       <img src={pokemonImg} />
       {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
