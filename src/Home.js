@@ -33,7 +33,7 @@ function Home() {
       </Link>
 
       <h1>{wildpokemon}</h1>
-      <img src={pokemonImg} alt="pokemonafbeelding" />
+      <img src={pokemonImg} />
       {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
       <div className="naampokemon">{pokemon}</div>
 
