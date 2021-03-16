@@ -20,9 +20,14 @@ function Home() {
         setWildpokemon("A wild Pokémon appeared!");
         setPokemonImg(data.sprites.other["official-artwork"].front_default);
         console.log(data);
+        setPokemonArray(pokemonArray.slice().push(data));
+        // pokemonArray.slice().push(data)
       })
       .catch(console.error);
   }
+
+  const [pokemonArray, setPokemonArray] = useState([]);
+  console.log(pokemonArray);
 
   return (
     <div className="home">

@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./pokedex.css";
+
+
 
 function Pokedexpage() {
   return (
-    <div className="pokedexbackground">
+    <div className="pokedex">
       <h1>Pokedex</h1>
-    </div>
+      <div className="PokemonKaart">
+      <img src="" alt=""/>
+      <h3>naampie</h3>
+      <p>typepokemon</p>
+      <p>pokemonnummer</p>
+      </div>
+      </div>
   );
 }
+
 export default Pokedexpage;
