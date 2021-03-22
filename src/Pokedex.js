@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./pokedex.css";
 
-
+/*Hier was ik mee bezig om de pokedex pagina te maken, 
+maar het is me helaas nog niet gelukt om data die al geweest is op te slaan.*/
 
 function Pokedexpage() {
   return (

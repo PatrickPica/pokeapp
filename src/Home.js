@@ -88,6 +88,7 @@ hier plaats ik de variabelen waar de data in zit.*/
             {type.type.name}
           </div>
         ))}
+        {/* Hieronder wordt de functie aangeroepen zodra er op de knop geklikt wordt. */}
       <button className="catchknop" onClick={randomPokemon}>
         Catch Pokémon!
       </button>
