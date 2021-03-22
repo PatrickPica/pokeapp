@@ -1,83 +1,19 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
-import Pokedex from "./Header"
+import React from "react";
+import Pokedexpage from "./Pokedex";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Home from "./Home";
+//Hier wordt de router toegepast, dit is een manier om meerdere pagina's te linken aan elkaar en aangezien ik er 2 heb moest ik deze linken aan elkaar.
 function App() {
-  const [pokemon, setPokemon] = useState("Start your adventure!");
-  const [pokemonImg, setPokemonImg] = useState();
-  const [wildpokemon, setWildpokemon] = useState("");
-  const [typepokemon, setTypepokemon] = useState();
-  const [nummerpokemon, setNummerpokemon] = useState();
-
-  function randomPokemon() {
-    const randNum = Math.abs(Math.floor(Math.random() * (0 - 151)));
-    fetch(`https://pokeapi.co/api/v2/pokemon/${randNum}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPokemon(data.name);
-        setTypepokemon(data.types);
-        setNummerpokemon(data.id);
-        setWildpokemon("A wild Pokémon appeared!");
-        setPokemonImg(data.sprites.other["official-artwork"].front_default);
-        console.log(data);
-      })
-      .catch(console.error);
-  }
-
   return (
-    <div className="App">
-      <Pokedex />
-      <h1>{wildpokemon}</h1>
-      <img src={pokemonImg} />
-      {nummerpokemon && <p className="pokemonnumber">#{nummerpokemon}</p>}
-      <div className="naampokemon">{pokemon}</div>
-
-      {typepokemon &&
-        typepokemon.map((type) => (
-          <div
-            className={
-              type.type.name === "poison"
-                ? "poison pokemontype"
-                : type.type.name === "water"
-                ? "water pokemontype"
-                : type.type.name === "bug"
-                ? "bug pokemontype"
-                : type.type.name === "normal"
-                ? "normal pokemontype"
-                : type.type.name === "electric"
-                ? "electric pokemontype"
-                : type.type.name === "fighting"
-                ? "fighting pokemontype"
-                : type.type.name === "ground"
-                ? "ground pokemontype"
-                : type.type.name === "psychic"
-                ? "psychic pokemontype"
-                : type.type.name === "rock"
-                ? "rock pokemontype"
-                : type.type.name === "fire"
-                ? "fire pokemontype"
-                : type.type.name === "grass"
-                ? "grass pokemontype"
-                : type.type.name === "ice"
-                ? "ice pokemontype"
-                : type.type.name === "flying"
-                ? "flying pokemontype"
-                : type.type.name === "ghost"
-                ? "ghost pokemontype"
-                : type.type.name === "dragon"
-                ? "dragon pokemontype"
-                : ""
-            }
-            key={type.type.name}
-          >
-            {type.type.name}
-          </div>
-        ))}
-
-      <button className="catchknop" onClick={randomPokemon}>
-        Catch Pokémon!
-      </button>
-    </div>
+    <Router>
+      <div className="App"></div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Pokedex" component={Pokedexpage} />
+      </Switch>
+    </Router>
   );
 }
 
